@@ -63,10 +63,10 @@
         const zipcode = document.getElementById('zipcode').value.trim();
 
         // Validate Full Name
-        if (fullName === '') {
-            document.getElementById('nameError').innerText = 'Full name is required.';
-            isValid = false;
-        }
+        const namePattern = /^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/; // At least two words
+            if (fullName === '') {
+                document.getElementById('nameError').innerText = 'Full name is required.';
+                isValid = false;
 
         // Validate Email
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -116,14 +116,14 @@
     <header>
         <div id="logo">
             <img src="logo.png">
-            <a href="products.html">D.E.J.</a>
+            <a href="index.html">D.E.J.</a>
         </div>
         <nav>
-            <a href="products.html">Products</a>
+            <a href="index.html">Products</a>
             <a href="news.html">News Updates</a>
             <a href="about-us.html">About Us</a>
         </nav>
-        <a href="contact-us.html" id="contact-button">Contact Us</a>
+        <a href="login/index.php" id="contact-button">Log In</a>
     </header>
     <section>
         <h1>Place Your Order</h1>

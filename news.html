@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Updates - D.E.J. Frozen Goods</title>
+    <title>Updates - D.E.J. Frozen Goods</title>
     <link rel="stylesheet" href="style.css">
     <style>
         section {
             margin: 10px;
+            display: flexbox;
         }
         article {
             background-color: #928282;
@@ -19,9 +20,23 @@
             gap: 10px;
         }
         article img {
-            width: 200px;
-            height: 200px;
+            width: 375px;
+            height: 375px;
+            height: auto;
             border-radius: 10px;
+        }
+        @media only screen and (max-width: 767px) {
+            body {
+                padding-top: 5px;
+            }
+            article {
+                display: flexbox;
+                flex-direction: column;
+            }
+            article img {
+                width: 200px;
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -32,28 +47,33 @@
             <a href="index.html">D.E.J.</a>
         </div>
         <nav>
-            <a href="inxdex.html">Products</a>
-            <a href="news.html"><span>News Updates</span></a>
+            <a href="index.html">Products</a>
+            <a href="news.html"><span>Updates</span></a>
             <a href="about-us.html">About Us</a>
         </nav>
-        <a href="contact-us.html" id="contact-button">Contact Us</a>
+        <a href="login/index.php" id="contact-button">Log In</a>
     </header>
     <section>
-        <h1>News Updates</h1>
+        <h1>Updates</h1>
         <article>
-            <h2>Chicken</h2>
-            <p>Our premium chicken is fresh, tender, and completely free from hormones and antibiotics, making it a healthier choice for your family. Sourced from trusted, ethically-run farms, our chickens are raised with care, ensuring that every bite is packed with rich, natural flavor. Whether you're grilling, roasting, or frying, our chicken is versatile and perfect for a wide range of dishes, from hearty family dinners to gourmet meals. High in protein, low in fat, and full of essential nutrients, our chicken not only tastes delicious but also supports a balanced, healthy lifestyle. Experience the difference in quality and elevate your meals with the Finest chicken, crafted for those who value both taste and nutrition.
-            </p>
+            <div>
+                <h2>Chicken</h2>
+                <p>Our premium chicken is fresh, tender, and completely free from hormones and antibiotics, making it a healthier choice for your family. Sourced from trusted, ethically-run farms, our chickens are raised with care, ensuring that every bite is packed with rich, natural flavor. Whether you're grilling, roasting, or frying, our chicken is versatile and perfect for a wide range of dishes, from hearty family dinners to gourmet meals. High in protein, low in fat, and full of essential nutrients, our chicken not only tastes delicious but also supports a balanced, healthy lifestyle. Experience the difference in quality and elevate your meals with the Finest chicken, crafted for those who value both taste and nutrition.</p>
+            </div>
             <img src="chicken.jpg">
         </article>
         <article>
-            <h2>Pork</h2>
-            <p>Sustainably caught and flash-frozen for maximum freshness, Tropical Sea Bliss brings vibrant flavors to your table. Perfect for grilling, frying, or stewing, this fish is both delicious and healthy, free from harmful additives. Elevate your meals with the essence of Philippine cuisine—bring home Tropical Sea Bliss today!</p>
+            <div>
+                <h2>Pork</h2>
+                <p>Sustainably caught and flash-frozen for maximum freshness, Tropical Sea Bliss brings vibrant flavors to your table. Perfect for grilling, frying, or stewing, this fish is both delicious and healthy, free from harmful additives. Elevate your meals with the essence of Philippine cuisine—bring home Tropical Sea Bliss today!</p>
+            </div>
             <img src="pork.jpg">
         </article>
         <article>
-            <h2>Beef</h2>
-            <p>Our premium beef is tender, flavorful, and responsibly sourced from trusted farms. Raised without hormones or antibiotics, it’s a wholesome choice for your family. Rich in protein and essential nutrients, our beef is perfect for grilling, roasting, or stewing, bringing hearty, delicious meals to your table. Experience the quality and savor the taste of premium beef crafted for those who value nutrition and flavor.</p>
+            <div>
+                <h2>Beef</h2>
+                <p>Our premium beef is tender, flavorful, and responsibly sourced from trusted farms. Raised without hormones or antibiotics, it’s a wholesome choice for your family. Rich in protein and essential nutrients, our beef is perfect for grilling, roasting, or stewing, bringing hearty, delicious meals to your table. Experience the quality and savor the taste of premium beef crafted for those who value nutrition and flavor.</p>
+            </div>
             <img src="beef.jpg">
         </article>
     </section>

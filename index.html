@@ -17,6 +17,7 @@
             text-align: center
         }
         #logo-banner {
+            width: 200px;
             height: 200px;
         }
         #food {
@@ -26,7 +27,7 @@
             display: flex;
             justify-content: space-evenly
         }
-        article {
+        section {
             background-color: #928282;
             margin: 15px;
             padding: 15px;
@@ -34,7 +35,7 @@
             box-shadow: 0 0px 10px #000000;
             width: auto;
         }
-        article img {
+        section img {
             width: 100%;
             border-radius: 10px;
         }
@@ -55,6 +56,27 @@
             box-shadow:  0 0 10px #ffffff, 0 0 10px #ffffff;
             color: #000000;
         }
+        @media only screen and (max-width: 767px) {
+            section {
+                display: flexbox;
+                flex-direction: column;
+            }
+            #logo-banner {
+                display:none;
+            }
+            #Banner img {
+                box-sizing: border-box;
+                width: 400px;
+                height: 250px;
+            }
+            #Products img {
+                width: 250px;
+                height: 250px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -65,10 +87,10 @@
         </div>
         <nav>
             <a href="index.html"><span>Products</span></a>
-            <a href="news.html">News Updates</a>
+            <a href="news.html">Updates</a>
             <a href="about-us.html">About Us</a>
         </nav>
-        <a href="contact-us.html" id="contact-button">Contact Us</a>
+        <a href="login/index.php" id="contact-button">Log In</a>
     </header>
     <section id="Banner">
         <img src="logo.png" id="logo-banner"></img>
@@ -76,27 +98,27 @@
         <img src="food.png" id="food"></img>
     </section>
     <section id="Products">
-        <article>
+        <section>
             <img src="chicken.jpg">
             <h2>Chicken</h2>
             <p>⭐⭐⭐⭐⭐</p>
             <p>Perfectly marinated and flash-frozen at peak freshness. Enjoy tender, juicy chicken.</p>
             <a href="form.html">Buy Now</a>
-        </article>
-        <article>
+        </section>
+        <section>
             <img src="beef.jpg">
             <h2>Beef</h2>
             <p>⭐⭐⭐⭐⭐</p>
             <p>Carefully selected cuts, marinated, and flash-frozen to preserve peak flavor and tenderness.</p>
             <a href="form.html">Buy Now</a>
-        </article>
-        <article>
+        </section>
+        <section>
             <img src="pork.jpg">
             <h2>Pork</h2>
             <p>⭐⭐⭐⭐⭐</p>
             <p>Expertly marinated and flash-frozen to lock in flavor and tenderness. Ideal for grilling or roasting.</p>
             <a href="form.html">Buy Now</a>
-        </article>
+        </section>
     </section>
     <footer>
         <p>&copy; 2024 D.E.J. Frozen Goods. All rights reserved.</p>
